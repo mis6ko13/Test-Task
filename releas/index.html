@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="vendor/normalize.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+  <script src="vendor/jquery-3.1.1.min.js"></script>
+  <script src="vendor/bootstrap.min.js"></script>
+  <title>Task App</title>
+</head>
+<body class="task-body" data-spy="scroll" data-target=".custom-header" data-offset="200">
+
+<!-- custom header here -->
+  <header>
+    <div class="jumbotron custom-header">
+      <div class="container">
+        <ol class="breadcrumb custom-breadcrumb col-sm-12 col-xs-12">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Manufacturing</a></li>
+          <li class="active">Design for Additive Manufacturing</li>
+        </ol>
+        <h2>Design for Additive Manufacturing</h2>
+        <div class="row">
+          <p class="col-md-5 col-sm-8 col-xs-12">Your design partner for everystage, from concept to serial production.</p>
+          <p class="col-md-12 col-sm-12 col-xs-12">
+            <a class="btn btn-warning btn-lg" href="#questions_section" role="button">Check more information</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- description section -->
+  <div class="container">
+    <section class="description row">
+      <div class="mobile-margin-bottom col-md-6 col-sm-6 col-xs-12">
+        <h2>Manufacturing for design</h2>
+        <p>Whatever your goals for Additive Manufacturing are, you’ll only reach them if you design towards them
+          from the start. That could mean bringing downcosts, eliminating assembly time, improving functionality
+          or aesthetics. As your partner in design for Additive Manufacturing, we support you in every stage of
+          the design process. From the co-creation of the concept, to product development, rapid prototyping
+          and serial
+        </p>
+        <b class="custom-bold">manufacturing.</b>
+      </div>
+      <div class="col-md-5 col-sm-5 col-xs-12 pull-right">
+        <ul class="list-group">
+          <li class="list-group-item">Engineering expertise to get you the most out of AM</li>
+          <li class="list-group-item">Optimal functionality and esthetics using freedom of design</li>
+          <li class="list-group-item">Expert design advice on technology and material choices</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!--  questions section here -->
+  <div id="questions_section" class="jumbotron questions">
+    <div class="container">
+      <section class="row">
+        <div class="container">
+          <h2>Frequently Asked Queations</h2>
+          <div class="panel-group" id="accordion">
+
+            <!-- dropdown panel -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">How can I register my software?</a>
+                </h4>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+            <!-- end of dropdown panel -->
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Activating a software wothout a key file</a>
+                </h4>
+              </div>
+              <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Activating a software with a key file</a>
+                </h4>
+              </div>
+              <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">How can I reactivate my software in case of emergancy?</a>
+                </h4>
+              </div>
+              <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">How long will my software remain activated?</a>
+                </h4>
+              </div>
+              <div id="collapse5" class="panel-collapse collapse">
+                <div class="panel-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+<script>
+  $(".custom-header a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+</script>
+</body>
+</html>
