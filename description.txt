@@ -1,0 +1,10 @@
+Technical Task
+
+Create the landing page presented in mockup.
+The webpage should have adaptive layout and look well on different screens
+(mobile, tablet and desktop).
+Clicking on 'Check more information' button in header section user will immediately
+get to 'Frequently Asked Questions' section with smooth scrolling.
+Clicking on each question title in 'Frequently Asked Questions' section user will
+see answer expanded below the title. Second click on same question collapse the answer back.
+By default all questions are collapsed
