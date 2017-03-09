@@ -1,5 +1,5 @@
 .custom-header {
-  background: url("../background.jpg") no-repeat;
+  background: url("../public/background.jpg") no-repeat;
   background-position-x: 70%;
   background-size: cover;
   min-height: 500px;

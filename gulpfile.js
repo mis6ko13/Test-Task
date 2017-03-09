@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
       browserSync = require('browser-sync').create(),
       useref = require('gulp-useref'),
       uglify = require('gulp-uglify'),
@@ -10,7 +10,7 @@ var gulp = require('gulp'),
       postcss = require('gulp-postcss'),
       del = require('del');
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
       baseDir: 'app'
@@ -19,7 +19,7 @@ gulp.task('browser-sync', function() {
 });
 
 
-gulp.task('prefix', function () {
+gulp.task('prefix', () => {
   return gulp.src('app/css/*.css')
     .pipe(prefix('last 2 versions'))
     .pipe(gulp.dest('app/postcss'))
@@ -28,7 +28,7 @@ gulp.task('prefix', function () {
     }))
 });
 
-gulp.task('useref', function(){
+gulp.task('useref', () => {
   return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(sourcemaps.init())
@@ -38,17 +38,21 @@ gulp.task('useref', function(){
     .pipe(gulp.dest('releas'))
 });
 
-gulp.task('clean:releas', function() {
+gulp.task('clean:releas', () => {
   return del.sync('releas');
 });
 
-gulp.task('default', ['browser-sync', 'prefix'], function(){
+gulp.task('copy:assets', () => {
+  gulp.src(['./app/public/**.*', './app/vendor/**.*'], {base: './app'})
+    .pipe(gulp.dest('releas'));
+});
+
+gulp.task('default', ['browser-sync', 'prefix'], () => {
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/css/*.css', ['prefix']);
   gulp.watch('app/js/*.js', browserSync.reload);
 });
 
-
-gulp.task('build', function (callback) {
-  runSequence('clean:releas', 'useref', callback)
+gulp.task('build', (callback) => {
+  runSequence('clean:releas', 'copy:assets', 'useref', callback)
 });
